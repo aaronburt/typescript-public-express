@@ -1,2 +1,4 @@
-node_modules/
 public/
+src/public
+src/node_modules
+.vscode/

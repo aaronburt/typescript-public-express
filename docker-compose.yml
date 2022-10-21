@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  webhost:
+    container_name: web
+    build: 
+      context: .
+      args:
+        - PORT=8085
+    volumes:
+      - type: bind
+        source: ./public
+        target: /app/public
+    
+    ports:
+      - "8080:8080"
