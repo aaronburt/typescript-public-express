@@ -5,7 +5,7 @@ dotenv.config();
 
 const { EXPRESS_PORT } = process.env;
 
-app.use(express.static('/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.all('*', (req: Request, res: Response) => { return res.status(404).json({ "status": 404 }); });
 
